@@ -1,0 +1,43 @@
+<config xmlns="http://tail-f.com/ns/config/1.0">
+    <devices xmlns="http://tail-f.com/ns/ncs">
+        <device>
+            <name>R1</name>
+            <address>172.100.0.101</address>
+            <authgroup>admin</authgroup>
+            <device-type>
+            <netconf>
+                <ned-id xmlns:nokia_sros-nc-24.10.2="http://tail-f.com/ns/ned-id/nokia_sros-nc-24.10.2">nokia_sros-nc-24.10.2:nokia_sros-nc-24.10.2</ned-id>
+            </netconf>
+            </device-type>
+            <state>
+            <admin-state>unlocked</admin-state>
+            </state>
+        </device>
+        <device>
+            <name>R2</name>
+            <address>172.100.0.102</address>
+            <authgroup>admin</authgroup>
+            <device-type>
+            <netconf>
+                <ned-id xmlns:nokia_sros-nc-24.10.2="http://tail-f.com/ns/ned-id/nokia_sros-nc-24.10.2">nokia_sros-nc-24.10.2:nokia_sros-nc-24.10.2</ned-id>
+            </netconf>
+            </device-type>
+            <state>
+            <admin-state>unlocked</admin-state>
+            </state>
+        </device>
+        <device>
+            <name>R3</name>
+            <address>172.100.0.103</address>
+            <authgroup>admin</authgroup>
+            <device-type>
+            <netconf>
+                <ned-id xmlns:nokia_sros-nc-24.10.2="http://tail-f.com/ns/ned-id/nokia_sros-nc-24.10.2">nokia_sros-nc-24.10.2:nokia_sros-nc-24.10.2</ned-id>
+            </netconf>
+            </device-type>
+            <state>
+            <admin-state>unlocked</admin-state>
+            </state>
+        </device>
+    </devices>
+</config>

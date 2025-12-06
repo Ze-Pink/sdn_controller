@@ -1,0 +1,50 @@
+module deploy-customers {
+
+  namespace "http://example.com/deploy-customers";
+  prefix deploy-customers;
+
+  import ietf-inet-types {
+    prefix inet;
+  }
+  import tailf-common {
+    prefix tailf;
+  }
+  import tailf-ncs {
+    prefix ncs;
+  }
+
+  description
+    "This service configures VRF and interfaces on routers for connecting customers";
+  
+  container deploy-customers {
+    list service-TSP {
+
+        key customer-name;
+        leaf customer-name {
+            type string;
+        }
+
+        uses ncs:service-data;
+        ncs:servicepoint deploy-customers-TSP-servicepoint;
+
+        container pe-attributes {
+            leaf id {
+              type leafref {
+                  path "/ncs:devices/ncs:device/ncs:name";
+              }
+            }
+            leaf port-id {
+                type string;
+                mandatory true;
+            }   
+            leaf ipv4-addr {
+                type inet:ipv4-address;
+                mandatory true;
+            }
+            leaf cidr-mask {
+                type int8;
+            }                      
+        }
+    }
+  }
+}

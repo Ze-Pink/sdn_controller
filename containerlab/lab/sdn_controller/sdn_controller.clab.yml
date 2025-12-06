@@ -1,0 +1,90 @@
+name: SDN
+
+mgmt:
+  network: transport_network_sdn_controller
+  ipv4-subnet: 172.100.0.0/16
+
+topology:
+  kinds:
+    nokia_sros:
+      image: ghcr.io/ze-pink/vrnetlab/nokia_sros:24.10.R2
+      license: sros-vm-24.10.R2.qcow2.license 
+      type: sr-1s 
+    linux:
+      image: ghcr.io/ze-pink/alpine-minimal:latest          
+
+  nodes:
+    gobgp:
+      kind: linux
+      image: ghcr.io/ze-pink/gobgp_custom_3.37.0:3.37.0
+      binds:
+        - gobgp/gobgp.conf:/etc/gobgp/gobgp.conf
+      cmd: "gobgpd -f /etc/gobgp/gobgp.conf --log-level=debug --log-plain"
+      ports:
+        - "50051:50051"  # gRPC API
+      exec: 
+        - ip link set eth1 up
+        - ip addr add 10.0.0.100/24 dev eth1
+
+    R1:
+      kind: nokia_sros
+      mgmt-ipv4: 172.100.0.101
+      startup-config: configs/R1_vprn.txt
+      
+    R2:
+      kind: nokia_sros
+      mgmt-ipv4: 172.100.0.102
+      startup-config: configs/R2.txt
+      
+    R3:
+      kind: nokia_sros
+      mgmt-ipv4: 172.100.0.103
+      startup-config: configs/R3_vprn.txt
+
+    CLIENT1:
+      kind: linux
+      mgmt-ipv4: 172.100.0.201
+      exec: 
+        - ip link set eth1 up
+        - ip addr add 100.10.0.2/24 dev eth1
+        - ip route add 100.30.0.0/24 via 100.10.0.1 dev eth1      
+        - ip route add 100.20.0.0/24 via 100.10.0.1 dev eth1 
+
+    CLIENT2:
+      kind: linux
+      mgmt-ipv4: 172.100.0.202
+      exec: 
+        - ip link set eth1 up
+        - ip addr add 100.20.0.2/24 dev eth1
+        - ip route add 100.30.0.0/24 via 100.20.0.1 dev eth1  
+        - ip route add 100.10.0.0/24 via 100.20.0.1 dev eth1    
+    
+    CLIENT3:
+      kind: linux
+      mgmt-ipv4: 172.100.0.203        
+      exec: 
+        - ip link set eth1 up
+        - ip addr add 100.30.0.2/24 dev eth1
+        - ip route add 100.10.0.0/24 via 100.30.0.1 dev eth1   
+        - ip route add 100.20.0.0/24 via 100.30.0.1 dev eth1          
+
+  links:
+    # Lien entre le serveur GoBGP et R3
+    - endpoints: ["gobgp:eth1", "R3:eth6"]
+
+    # Liens entre R1 et R2 (pour LAG-1 sur R1)
+    - endpoints: ["R1:eth1", "R2:eth1"]
+    - endpoints: ["R1:eth2", "R2:eth2"]
+    
+    # Liens entre R1 et R3 (pour LAG-2 sur R1)
+    - endpoints: ["R1:eth3", "R3:eth1"]
+    - endpoints: ["R1:eth4", "R3:eth2"]
+    
+    # Liens entre R2 et R3 (pour LAG-2 sur R2)
+    - endpoints: ["R2:eth3", "R3:eth3"]
+    - endpoints: ["R2:eth4", "R3:eth4"]
+
+    # Lien entre Rx et CLIENTx
+    - endpoints: ["R1:eth5", "CLIENT1:eth1"]
+    - endpoints: ["R2:eth5", "CLIENT2:eth1"]
+    - endpoints: ["R3:eth5", "CLIENT3:eth1"]    

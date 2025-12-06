@@ -1,0 +1,201 @@
+{
+    "DEVICE": {
+        "R1": {
+            "LOGICAL": {
+                "to-R2": {
+                    "ATTACH": "1",
+                    "VLAN": "",
+                    "NETWORK": "10.1.12.0/30",
+                    "MASK": "30",
+                    "IP": "10.1.12.1"
+                },
+                "to-R3": {
+                    "ATTACH": "2",
+                    "VLAN": "",
+                    "NETWORK": "10.1.13.0/30",
+                    "MASK": "30",
+                    "IP": "10.1.13.1"
+                }
+            },
+            "LAG": {
+                "1": {
+                    "admin-state": "enable"
+                },
+                "2": {
+                    "admin-state": "enable"
+                }
+            },
+            "PORT": {
+                "1/1/c1/1": {
+                    "LAG": "1"
+                },
+                "1/1/c2/1": {
+                    "LAG": "1"
+                },
+                "1/1/c3/1": {
+                    "LAG": "2"
+                },
+                "1/1/c4/1": {
+                    "LAG": "2"
+                }
+            }
+        },
+        "R2": {
+            "LOGICAL": {
+                "to-R1": {
+                    "ATTACH": "1",
+                    "VLAN": "",
+                    "NETWORK": "10.1.12.0/30",
+                    "MASK": "30",
+                    "IP": "10.1.12.2"
+                },
+                "to-R3": {
+                    "ATTACH": "2",
+                    "VLAN": "",
+                    "NETWORK": "10.1.23.0/30",
+                    "MASK": "30",
+                    "IP": "10.1.23.1"
+                }
+            },
+            "LAG": {
+                "1": {
+                    "admin-state": "enable"
+                },
+                "2": {
+                    "admin-state": "enable"
+                }
+            },
+            "PORT": {
+                "1/1/c1/1": {
+                    "LAG": "1"
+                },
+                "1/1/c2/1": {
+                    "LAG": "1"
+                },
+                "1/1/c3/1": {
+                    "LAG": "2"
+                },
+                "1/1/c4/1": {
+                    "LAG": "2"
+                }
+            }
+        },
+        "R3": {
+            "LOGICAL": {
+                "to-GoBGP": {
+                    "ATTACH": "1/1/c6/1",
+                    "VLAN": "",
+                    "NETWORK": "10.0.0.0/24",
+                    "MASK": "24",
+                    "IP": "10.0.0.103"
+                },
+                "to-R1": {
+                    "ATTACH": "1",
+                    "VLAN": "",
+                    "NETWORK": "10.1.13.0/30",
+                    "MASK": "30",
+                    "IP": "10.1.13.2"
+                },
+                "to-R2": {
+                    "ATTACH": "2",
+                    "VLAN": "",
+                    "NETWORK": "10.1.23.0/30",
+                    "MASK": "30",
+                    "IP": "10.1.23.2"
+                }
+            },
+            "LAG": {
+                "1": {
+                    "admin-state": "enable"
+                },
+                "2": {
+                    "admin-state": "enable"
+                }
+            },
+            "PORT": {
+                "1/1/c1/1": {
+                    "LAG": "1"
+                },
+                "1/1/c2/1": {
+                    "LAG": "1"
+                },
+                "1/1/c3/1": {
+                    "LAG": "2"
+                },
+                "1/1/c4/1": {
+                    "LAG": "2"
+                }
+            }
+        }
+    },
+    "ISIS": {
+        "R1": {
+            "to-R2": {
+                "METRIC": 10,
+                "ADJ_SID": 100012
+            },
+            "to-R3": {
+                "METRIC": 10,
+                "ADJ_SID": 100013
+            }
+        },
+        "R2": {
+            "to-R1": {
+                "METRIC": 10,
+                "ADJ_SID": 100021
+            },
+            "to-R3": {
+                "METRIC": 10,
+                "ADJ_SID": 100023
+            }
+        },
+        "R3": {
+            "to-R1": {
+                "METRIC": 10,
+                "ADJ_SID": 100031
+            },
+            "to-R2": {
+                "METRIC": 10,
+                "ADJ_SID": 100032
+            }
+        }
+    },
+    "IP_RELATION": {
+        "10.1.12.0/30": {
+            "R1.LOGICAL.to-R2": {
+                "IP": "10.1.12.1",
+                "DESCRIPTION": ""
+            },
+            "R2.LOGICAL.to-R1": {
+                "IP": "10.1.12.2",
+                "DESCRIPTION": ""
+            }
+        },
+        "10.1.13.0/30": {
+            "R1.LOGICAL.to-R3": {
+                "IP": "10.1.13.1",
+                "DESCRIPTION": ""
+            },
+            "R3.LOGICAL.to-R1": {
+                "IP": "10.1.13.2",
+                "DESCRIPTION": ""
+            }
+        },
+        "10.1.23.0/30": {
+            "R2.LOGICAL.to-R3": {
+                "IP": "10.1.23.1",
+                "DESCRIPTION": ""
+            },
+            "R3.LOGICAL.to-R2": {
+                "IP": "10.1.23.2",
+                "DESCRIPTION": ""
+            }
+        },
+        "10.0.0.0/24": {
+            "R3.LOGICAL.to-GoBGP": {
+                "IP": "10.0.0.103",
+                "DESCRIPTION": ""
+            }
+        }
+    }
+}

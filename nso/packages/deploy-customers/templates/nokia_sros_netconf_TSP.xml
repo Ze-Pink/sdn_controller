@@ -1,0 +1,127 @@
+<config xmlns="http://tail-f.com/ns/config/1.0">
+  <devices xmlns="http://tail-f.com/ns/ncs">
+    <device>
+      <name>{$PE_ID}</name>
+      <config>
+        <configure xmlns="urn:nokia.com:sros:ns:yang:sr:conf">
+
+          <port>
+            <port-id>{$PE_PORT_CONNECTOR}</port-id>
+            <admin-state>enable</admin-state>
+            <connector>
+              <breakout>c1-100g</breakout>
+            </connector>
+          </port>
+
+          <port>
+            <port-id>{$PE_PORT_ID}</port-id>
+            <admin-state>enable</admin-state>
+            <description>Link to {$CUSTOMER_NAME}</description>
+            <ethernet>
+              <mode>access</mode>
+            </ethernet>
+          </port>    
+
+          <policy-options>
+              <community>
+                <name>RT_FULLMESH</name>
+                <member>
+                  <member>target:65000:100</member>
+                </member>
+              </community>
+
+              <policy-statement>
+                <name>RT_EXPORT</name>
+                <entry>
+                  <entry-id>10</entry-id>
+                    <from>
+                      <protocol>
+                        <name>direct</name>
+                      </protocol>
+                    </from>
+                    <action>
+                      <action-type>accept</action-type>
+                      <community>
+                        <add>RT_FULLMESH</add>
+                      </community>
+                    </action>
+                  </entry>
+                  <default-action>
+                    <action-type>reject</action-type>
+                  </default-action>
+                </policy-statement>
+                
+                <policy-statement>
+                  <name>RT_IMPORT</name>
+                  <entry>
+                    <entry-id>10</entry-id>
+                    <from>
+                      <community>
+                        <name>RT_FULLMESH</name>
+                      </community>
+                      <protocol>
+                        <name>bgp-vpn</name>
+                      </protocol>
+                    </from>
+                    <action>
+                      <action-type>accept</action-type>
+                    </action>
+                  </entry>
+                  <default-action>
+                    <action-type>reject</action-type>
+                  </default-action>
+                </policy-statement>
+          </policy-options>          
+
+          <service>
+            <customer>
+              <customer-name>TSP</customer-name>
+              <customer-id>100</customer-id>
+            </customer>     
+
+            <vprn>
+              <service-name>VPRN-TSP</service-name>
+              <service-id>100</service-id>
+              <customer>TSP</customer>
+              <admin-state>enable</admin-state>
+              <autonomous-system>{$PE_AS}</autonomous-system>
+              <bgp-ipvpn>
+                <mpls>
+                  <admin-state>enable</admin-state>
+                  <route-distinguisher>{$PE_LOOPBACK_SYSTEM}:100</route-distinguisher>
+                  <vrf-import>
+                    <policy>RT_IMPORT</policy>
+                  </vrf-import>
+                  <vrf-export>
+                    <policy>RT_EXPORT</policy>
+                  </vrf-export>
+                  <auto-bind-tunnel>
+                    <resolution>any</resolution>
+                    <resolution-filter>
+                      <sr-isis>true</sr-isis>
+                    </resolution-filter>
+                  </auto-bind-tunnel>
+                </mpls>
+              </bgp-ipvpn>
+
+              <interface>
+                <interface-name>to-{$CUSTOMER_NAME}</interface-name>
+                <admin-state>enable</admin-state>
+                <ipv4>
+                  <primary>
+                    <address>{$PE_INTF_IPV4_ADDR}</address>
+                    <prefix-length>{$PE_INTF_IPV4_MASK}</prefix-length>
+                  </primary>
+                </ipv4>
+                <sap>
+                  <sap-id>{$PE_PORT_ID}</sap-id>
+                </sap>
+              </interface>
+            </vprn>
+          </service>
+
+        </configure>
+      </config>
+    </device>
+  </devices>
+</config>

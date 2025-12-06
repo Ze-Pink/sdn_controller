@@ -1,0 +1,74 @@
+name: transport_network
+
+services:
+  neo4j:
+    image: ghcr.io/ze-pink/neo4j:latest
+    container_name: neo4j
+    hostname: neo4j
+    environment:
+      - NEO4J_AUTH=none
+      - NEO4J_PLUGINS=["graph-data-science","apoc"]
+      - NEO4J_dbms_security_procedures_unrestricted=gds.*,apoc.*
+      - NEO4J_dbms_security_procedures_allowlist=gds.*,apoc.*
+      - NEO4J_db_logs_query_enabled=VERBOSE
+      - NEO4J_db_logs_query_threshold=0s
+      - NEO4J_db_logs_query_parameter__logging__enabled=true
+      - NEO4J_db_logs_query_obfuscate__literals=false
+      - NEO4J_apoc_export_file_enabled=true
+      - NEO4J_apoc_import_file_enabled=true      
+    volumes:
+      - ~/sdn_controller/neo4j/data:/data
+      - ~/sdn_controller/neo4j/logs:/logs
+      - ~/sdn_controller/neo4j/import:/var/lib/neo4j/import
+      - ~/sdn_controller/neo4j/plugins:/plugins          
+    ports:
+      - "7474:7474"
+      - "7687:7687"      
+    networks:
+      sdn_controller:
+        ipv4_address: 172.100.0.10
+
+
+  nso-6.4.8:
+    image: ghcr.io/ze-pink/cisco-nso-prod:6.4.8
+    container_name: nso-6.4.8
+    hostname: nso-6.4.8  
+    working_dir: /nso/run/payloads 
+    environment:
+      - EXTRA_ARGS=--with-package-reload-force
+      - ADMIN_USERNAME=admin
+      - ADMIN_PASSWORD=admin
+    healthcheck:
+      test: ncs_cmd -c "wait-start 2"
+      interval: 5s
+      retries: 5
+      start_period: 10s
+      timeout: 10s
+    volumes:
+      - type: bind
+        source: ~/sdn_controller/nso/packages/
+        target: /nso/run/packages
+      - type: bind
+        source: ~/sdn_controller/nso/ncs/
+        target: /nso/etc
+      - type: bind
+        source: ~/sdn_controller/nso/payloads/
+        target: /nso/run/payloads
+      - type: bind
+        source: ~/sdn_controller/nso/log/
+        target: /log              
+    ports:
+      - "8080:8080"
+      - "2024:2024"
+    networks:
+      sdn_controller:
+        ipv4_address: 172.100.0.12      
+
+      
+networks:
+  sdn_controller:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.100.0.0/16  # Large subnet pour tous les conteneurs
+          gateway: 172.100.0.1

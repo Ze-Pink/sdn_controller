@@ -1,0 +1,13 @@
+---
+
+netsim_neds:
+  iosxr: ncs-5.6.8-cisco-iosxr-7.42
+  alusr: ncs-5.7.6-alu-sr-8.31
+  ios: ncs-5.7.8-cisco-ios-6.90.1
+
+netsim_devices:
+  -
+    name: Spoke3-XR
+    ned: iosxr
+
+  

@@ -1,0 +1,11 @@
+<config xmlns="http://tail-f.com/ns/config/1.0">
+  <traffic-engineering xmlns="http://example.com/traffic-engineering">
+    <source>R1</source>
+    <destination>R2</destination>
+    <color>102</color>
+    <service-type>vprn</service-type>
+    <service-name>VPRN-TSP</service-name>
+    <label-path>100013</label-path>
+    <label-path>100032</label-path>
+  </traffic-engineering>
+</config>

@@ -1,0 +1,116 @@
+[
+  {
+    "device": "R1",
+    "neighbor_count": 4,
+    "neighbors": [
+      {
+        "local_port": "1/1/c3/1",
+        "scope": "NB",
+        "remote_chassis_id": "0C:00:50:DC:FA:00",
+        "index": 1,
+        "remote_port": "1/1/c1/1",
+        "remote_system_name": "R3"
+      },
+      {
+        "local_port": "1/1/c4/1",
+        "scope": "NB",
+        "remote_chassis_id": "0C:00:50:DC:FA:00",
+        "index": 2,
+        "remote_port": "1/1/c2/1",
+        "remote_system_name": "R3"
+      },
+      {
+        "local_port": "1/1/c2/1",
+        "scope": "NB",
+        "remote_chassis_id": "0C:00:E3:0A:5A:00",
+        "index": 3,
+        "remote_port": "1/1/c2/1",
+        "remote_system_name": "R2"
+      },
+      {
+        "local_port": "1/1/c1/1",
+        "scope": "NB",
+        "remote_chassis_id": "0C:00:E3:0A:5A:00",
+        "index": 4,
+        "remote_port": "1/1/c1/1",
+        "remote_system_name": "R2"
+      }
+    ]
+  },
+  {
+    "device": "R2",
+    "neighbor_count": 4,
+    "neighbors": [
+      {
+        "local_port": "1/1/c2/1",
+        "scope": "NB",
+        "remote_chassis_id": "0C:00:52:76:F1:00",
+        "index": 1,
+        "remote_port": "1/1/c2/1",
+        "remote_system_name": "R1"
+      },
+      {
+        "local_port": "1/1/c3/1",
+        "scope": "NB",
+        "remote_chassis_id": "0C:00:50:DC:FA:00",
+        "index": 2,
+        "remote_port": "1/1/c3/1",
+        "remote_system_name": "R3"
+      },
+      {
+        "local_port": "1/1/c4/1",
+        "scope": "NB",
+        "remote_chassis_id": "0C:00:50:DC:FA:00",
+        "index": 3,
+        "remote_port": "1/1/c4/1",
+        "remote_system_name": "R3"
+      },
+      {
+        "local_port": "1/1/c1/1",
+        "scope": "NB",
+        "remote_chassis_id": "0C:00:52:76:F1:00",
+        "index": 4,
+        "remote_port": "1/1/c1/1",
+        "remote_system_name": "R1"
+      }
+    ]
+  },
+  {
+    "device": "R3",
+    "neighbor_count": 4,
+    "neighbors": [
+      {
+        "local_port": "1/1/c1/1",
+        "scope": "NB",
+        "remote_chassis_id": "0C:00:52:76:F1:00",
+        "index": 1,
+        "remote_port": "1/1/c3/1",
+        "remote_system_name": "R1"
+      },
+      {
+        "local_port": "1/1/c2/1",
+        "scope": "NB",
+        "remote_chassis_id": "0C:00:52:76:F1:00",
+        "index": 2,
+        "remote_port": "1/1/c4/1",
+        "remote_system_name": "R1"
+      },
+      {
+        "local_port": "1/1/c3/1",
+        "scope": "NB",
+        "remote_chassis_id": "0C:00:E3:0A:5A:00",
+        "index": 3,
+        "remote_port": "1/1/c3/1",
+        "remote_system_name": "R2"
+      },
+      {
+        "local_port": "1/1/c4/1",
+        "scope": "NB",
+        "remote_chassis_id": "0C:00:E3:0A:5A:00",
+        "index": 4,
+        "remote_port": "1/1/c4/1",
+        "remote_system_name": "R2"
+      }
+    ]
+  }
+]

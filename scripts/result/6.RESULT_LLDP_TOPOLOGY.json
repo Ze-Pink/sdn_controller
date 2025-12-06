@@ -1,0 +1,74 @@
+{
+  "R1": {
+    "neighbors": {
+      "1/1/c3/1": {
+        "remote_device": "R3",
+        "remote_port": "1/1/c1/1",
+        "chassis_id": "0C:00:50:DC:FA:00"
+      },
+      "1/1/c4/1": {
+        "remote_device": "R3",
+        "remote_port": "1/1/c2/1",
+        "chassis_id": "0C:00:50:DC:FA:00"
+      },
+      "1/1/c2/1": {
+        "remote_device": "R2",
+        "remote_port": "1/1/c2/1",
+        "chassis_id": "0C:00:E3:0A:5A:00"
+      },
+      "1/1/c1/1": {
+        "remote_device": "R2",
+        "remote_port": "1/1/c1/1",
+        "chassis_id": "0C:00:E3:0A:5A:00"
+      }
+    }
+  },
+  "R2": {
+    "neighbors": {
+      "1/1/c2/1": {
+        "remote_device": "R1",
+        "remote_port": "1/1/c2/1",
+        "chassis_id": "0C:00:52:76:F1:00"
+      },
+      "1/1/c3/1": {
+        "remote_device": "R3",
+        "remote_port": "1/1/c3/1",
+        "chassis_id": "0C:00:50:DC:FA:00"
+      },
+      "1/1/c4/1": {
+        "remote_device": "R3",
+        "remote_port": "1/1/c4/1",
+        "chassis_id": "0C:00:50:DC:FA:00"
+      },
+      "1/1/c1/1": {
+        "remote_device": "R1",
+        "remote_port": "1/1/c1/1",
+        "chassis_id": "0C:00:52:76:F1:00"
+      }
+    }
+  },
+  "R3": {
+    "neighbors": {
+      "1/1/c1/1": {
+        "remote_device": "R1",
+        "remote_port": "1/1/c3/1",
+        "chassis_id": "0C:00:52:76:F1:00"
+      },
+      "1/1/c2/1": {
+        "remote_device": "R1",
+        "remote_port": "1/1/c4/1",
+        "chassis_id": "0C:00:52:76:F1:00"
+      },
+      "1/1/c3/1": {
+        "remote_device": "R2",
+        "remote_port": "1/1/c3/1",
+        "chassis_id": "0C:00:E3:0A:5A:00"
+      },
+      "1/1/c4/1": {
+        "remote_device": "R2",
+        "remote_port": "1/1/c4/1",
+        "chassis_id": "0C:00:E3:0A:5A:00"
+      }
+    }
+  }
+}

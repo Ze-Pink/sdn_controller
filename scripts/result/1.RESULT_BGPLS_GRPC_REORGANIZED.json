@@ -1,0 +1,153 @@
+{
+  "routers": {
+    "0030.0300.3003": {
+      "node_info": {
+        "type": "node",
+        "protocol_id": "LS_PROTOCOL_ISIS_L2",
+        "igp_router_id": "0030.0300.3003",
+        "local_router_id": "3.3.3.3",
+        "node_name": "R3",
+        "asn": 65000,
+        "sr_capabilities": {
+          "ranges": [
+            {
+              "begin": 20000,
+              "end": 30001
+            }
+          ]
+        }
+      },
+      "links": [
+        {
+          "remote_node_igp_router_id": "0010.0100.1001",
+          "local_ip": "10.1.13.2",
+          "remote_ip": "10.1.13.1",
+          "igp_metric": 10,
+          "sr_adjacency_sid": 100031
+        },
+        {
+          "remote_node_igp_router_id": "0020.0200.2002",
+          "local_ip": "10.1.23.2",
+          "remote_ip": "10.1.23.1",
+          "igp_metric": 10,
+          "sr_adjacency_sid": 100032
+        }
+      ],
+      "prefixes": [
+        {
+          "prefix": "3.3.3.3/32",
+          "sr_prefix_sid": 3
+        },
+        {
+          "prefix": "10.1.23.0/30",
+          "sr_prefix_sid": null
+        },
+        {
+          "prefix": "10.1.13.0/30",
+          "sr_prefix_sid": null
+        }
+      ]
+    },
+    "0010.0100.1001": {
+      "node_info": {
+        "type": "node",
+        "protocol_id": "LS_PROTOCOL_ISIS_L2",
+        "igp_router_id": "0010.0100.1001",
+        "local_router_id": "1.1.1.1",
+        "node_name": "R1",
+        "asn": 65000,
+        "sr_capabilities": {
+          "ranges": [
+            {
+              "begin": 20000,
+              "end": 30001
+            }
+          ]
+        }
+      },
+      "links": [
+        {
+          "remote_node_igp_router_id": "0030.0300.3003",
+          "local_ip": "10.1.13.1",
+          "remote_ip": "10.1.13.2",
+          "igp_metric": 10,
+          "sr_adjacency_sid": 100013
+        },
+        {
+          "remote_node_igp_router_id": "0020.0200.2002",
+          "local_ip": "10.1.12.1",
+          "remote_ip": "10.1.12.2",
+          "igp_metric": 10,
+          "sr_adjacency_sid": 100012
+        }
+      ],
+      "prefixes": [
+        {
+          "prefix": "10.1.13.0/30",
+          "sr_prefix_sid": null
+        },
+        {
+          "prefix": "1.1.1.1/32",
+          "sr_prefix_sid": 1
+        },
+        {
+          "prefix": "10.1.12.0/30",
+          "sr_prefix_sid": null
+        }
+      ]
+    },
+    "0020.0200.2002": {
+      "node_info": {
+        "type": "node",
+        "protocol_id": "LS_PROTOCOL_ISIS_L2",
+        "igp_router_id": "0020.0200.2002",
+        "local_router_id": "2.2.2.2",
+        "node_name": "R2",
+        "asn": 65000,
+        "sr_capabilities": {
+          "ranges": [
+            {
+              "begin": 20000,
+              "end": 30001
+            }
+          ]
+        }
+      },
+      "links": [
+        {
+          "remote_node_igp_router_id": "0010.0100.1001",
+          "local_ip": "10.1.12.2",
+          "remote_ip": "10.1.12.1",
+          "igp_metric": 10,
+          "sr_adjacency_sid": 100021
+        },
+        {
+          "remote_node_igp_router_id": "0030.0300.3003",
+          "local_ip": "10.1.23.1",
+          "remote_ip": "10.1.23.2",
+          "igp_metric": 10,
+          "sr_adjacency_sid": 100023
+        }
+      ],
+      "prefixes": [
+        {
+          "prefix": "2.2.2.2/32",
+          "sr_prefix_sid": 2
+        },
+        {
+          "prefix": "10.1.23.0/30",
+          "sr_prefix_sid": null
+        },
+        {
+          "prefix": "10.1.12.0/30",
+          "sr_prefix_sid": null
+        }
+      ]
+    }
+  },
+  "statistics": {
+    "router_count": 3,
+    "total_links": 6,
+    "total_prefixes": 9
+  }
+}

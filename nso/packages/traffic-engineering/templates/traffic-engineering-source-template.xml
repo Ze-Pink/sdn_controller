@@ -1,0 +1,38 @@
+<config xmlns="http://tail-f.com/ns/config/1.0">
+  <devices xmlns="http://tail-f.com/ns/ncs">
+    <device>
+      <name>{$SOURCE_DEVICE}</name>
+      <config>
+        <configure xmlns="urn:nokia.com:sros:ns:yang:sr:conf">
+
+          <router>
+            <router-name>Base</router-name>
+            <segment-routing>
+              <sr-policies>
+                <admin-state>enable</admin-state>
+                <reserved-label-block>SRLB-BSID</reserved-label-block>
+                <static-policy>
+                  <name>{$SOURCE_DEVICE}-{$DESTINATION_DEVICE}-COLOR-{$COLOR}</name>
+                  <admin-state>enable</admin-state>
+                  <color>{$COLOR}</color>
+                  <endpoint>{$DESTINATION_IP}</endpoint>
+                  <head-end>local</head-end>
+                  <binding-sid>100{$COLOR}</binding-sid>
+                  <segment-list>
+                    <seg-list-index>1</seg-list-index>
+                    <admin-state>enable</admin-state>
+                    <segment>
+                      <segment-index>{$INDEX_PATH}</segment-index>
+                      <mpls-label>{$LABEL_PATH}</mpls-label>
+                    </segment>
+                  </segment-list>
+                </static-policy>
+              </sr-policies>
+            </segment-routing>
+          </router>
+
+        </configure>
+      </config>
+    </device>
+  </devices>
+</config>

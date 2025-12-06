@@ -1,0 +1,56 @@
+module traffic-engineering {
+
+  namespace "http://example.com/traffic-engineering";
+  prefix traffic-engineering;
+
+  import ietf-inet-types {
+    prefix inet;
+  }
+  import tailf-common {
+    prefix tailf;
+  }
+  import tailf-ncs {
+    prefix ncs;
+  }
+
+
+  list traffic-engineering {
+
+    key 'source destination color';
+    
+    leaf source {
+      type leafref {
+          path "/ncs:devices/ncs:device/ncs:name";
+      }
+    }
+
+    leaf destination {
+      type leafref {
+          path "/ncs:devices/ncs:device/ncs:name";
+      }
+    }    
+
+    leaf color {
+      type int32;
+    }    
+
+    uses ncs:service-data;
+    ncs:servicepoint traffic-engineering-servicepoint;
+
+    leaf service-type {
+      type enumeration {
+        enum 'vprn';
+      }
+    }
+
+    leaf service-name {
+      type string;
+    }
+
+    leaf-list label-path {
+      type int32;
+      ordered-by user;
+    }    
+
+  }
+}

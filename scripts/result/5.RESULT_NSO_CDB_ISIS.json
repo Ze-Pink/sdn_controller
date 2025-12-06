@@ -1,0 +1,32 @@
+{
+    "R1": {
+        "to-R2": {
+            "METRIC": 10,
+            "ADJ_SID": 100012
+        },
+        "to-R3": {
+            "METRIC": 10,
+            "ADJ_SID": 100013
+        }
+    },
+    "R2": {
+        "to-R1": {
+            "METRIC": 10,
+            "ADJ_SID": 100021
+        },
+        "to-R3": {
+            "METRIC": 10,
+            "ADJ_SID": 100023
+        }
+    },
+    "R3": {
+        "to-R1": {
+            "METRIC": 10,
+            "ADJ_SID": 100031
+        },
+        "to-R2": {
+            "METRIC": 10,
+            "ADJ_SID": 100032
+        }
+    }
+}

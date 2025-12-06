@@ -1,0 +1,1727 @@
+[
+  {
+    "prefix": "NLRI { PREFIXv4 { LOCAL_NODE: 0010.0100.1001 PREFIX: [10.1.13.0/30] } }",
+    "paths": [
+      {
+        "nlri": {
+          "@type": "type.googleapis.com/apipb.LsAddrPrefix",
+          "type": "LS_NLRI_PREFIX_V4",
+          "nlri": {
+            "@type": "type.googleapis.com/apipb.LsPrefixV4NLRI",
+            "local_node": {
+              "asn": 65000,
+              "bgp_ls_id": 100,
+              "igp_router_id": "0010.0100.1001",
+              "bgp_router_id": "<nil>"
+            },
+            "prefix_descriptor": {
+              "ip_reachability": [
+                "10.1.13.0/30"
+              ]
+            }
+          },
+          "length": 48,
+          "protocol_id": "LS_PROTOCOL_ISIS_L2"
+        },
+        "pattrs": [
+          {
+            "@type": "type.googleapis.com/apipb.OriginAttribute"
+          },
+          {
+            "@type": "type.googleapis.com/apipb.AsPathAttribute"
+          },
+          {
+            "@type": "type.googleapis.com/apipb.LocalPrefAttribute",
+            "local_pref": 100
+          },
+          {
+            "@type": "type.googleapis.com/apipb.LsAttribute",
+            "node": {},
+            "link": {},
+            "prefix": {
+              "igp_flags": {}
+            },
+            "bgp_peer_segment": {}
+          },
+          {
+            "@type": "type.googleapis.com/apipb.MpReachNLRIAttribute",
+            "family": {
+              "afi": "AFI_LS",
+              "safi": "SAFI_LS"
+            },
+            "next_hops": [
+              "10.0.0.103"
+            ],
+            "nlris": [
+              {
+                "@type": "type.googleapis.com/apipb.LsAddrPrefix",
+                "type": "LS_NLRI_PREFIX_V4",
+                "nlri": {
+                  "@type": "type.googleapis.com/apipb.LsPrefixV4NLRI",
+                  "local_node": {
+                    "asn": 65000,
+                    "bgp_ls_id": 100,
+                    "igp_router_id": "0010.0100.1001",
+                    "bgp_router_id": "<nil>"
+                  },
+                  "prefix_descriptor": {
+                    "ip_reachability": [
+                      "10.1.13.0/30"
+                    ]
+                  }
+                },
+                "length": 48,
+                "protocol_id": "LS_PROTOCOL_ISIS_L2"
+              }
+            ]
+          }
+        ],
+        "age": "2025-12-06T11:29:58Z",
+        "best": true,
+        "validation": {},
+        "family": {
+          "afi": "AFI_LS",
+          "safi": "SAFI_LS"
+        },
+        "source_asn": 65000,
+        "source_id": "3.3.3.3",
+        "neighbor_ip": "10.0.0.103",
+        "local_identifier": 1
+      }
+    ]
+  },
+  {
+    "prefix": "NLRI { PREFIXv4 { LOCAL_NODE: 0020.0200.2002 PREFIX: [2.2.2.2/32] } }",
+    "paths": [
+      {
+        "nlri": {
+          "@type": "type.googleapis.com/apipb.LsAddrPrefix",
+          "type": "LS_NLRI_PREFIX_V4",
+          "nlri": {
+            "@type": "type.googleapis.com/apipb.LsPrefixV4NLRI",
+            "local_node": {
+              "asn": 65000,
+              "bgp_ls_id": 100,
+              "igp_router_id": "0020.0200.2002",
+              "bgp_router_id": "<nil>"
+            },
+            "prefix_descriptor": {
+              "ip_reachability": [
+                "2.2.2.2/32"
+              ]
+            }
+          },
+          "length": 48,
+          "protocol_id": "LS_PROTOCOL_ISIS_L2"
+        },
+        "pattrs": [
+          {
+            "@type": "type.googleapis.com/apipb.OriginAttribute"
+          },
+          {
+            "@type": "type.googleapis.com/apipb.AsPathAttribute"
+          },
+          {
+            "@type": "type.googleapis.com/apipb.LocalPrefAttribute",
+            "local_pref": 100
+          },
+          {
+            "@type": "type.googleapis.com/apipb.LsAttribute",
+            "node": {},
+            "link": {},
+            "prefix": {
+              "igp_flags": {},
+              "sr_prefix_sid": 2
+            },
+            "bgp_peer_segment": {}
+          },
+          {
+            "@type": "type.googleapis.com/apipb.MpReachNLRIAttribute",
+            "family": {
+              "afi": "AFI_LS",
+              "safi": "SAFI_LS"
+            },
+            "next_hops": [
+              "10.0.0.103"
+            ],
+            "nlris": [
+              {
+                "@type": "type.googleapis.com/apipb.LsAddrPrefix",
+                "type": "LS_NLRI_PREFIX_V4",
+                "nlri": {
+                  "@type": "type.googleapis.com/apipb.LsPrefixV4NLRI",
+                  "local_node": {
+                    "asn": 65000,
+                    "bgp_ls_id": 100,
+                    "igp_router_id": "0020.0200.2002",
+                    "bgp_router_id": "<nil>"
+                  },
+                  "prefix_descriptor": {
+                    "ip_reachability": [
+                      "2.2.2.2/32"
+                    ]
+                  }
+                },
+                "length": 48,
+                "protocol_id": "LS_PROTOCOL_ISIS_L2"
+              }
+            ]
+          }
+        ],
+        "age": "2025-12-06T11:11:40Z",
+        "best": true,
+        "validation": {},
+        "family": {
+          "afi": "AFI_LS",
+          "safi": "SAFI_LS"
+        },
+        "source_asn": 65000,
+        "source_id": "3.3.3.3",
+        "neighbor_ip": "10.0.0.103",
+        "local_identifier": 1
+      }
+    ]
+  },
+  {
+    "prefix": "NLRI { LINK { LOCAL_NODE: 0010.0100.1001 REMOTE_NODE: 0030.0300.3003 LINK: 10.1.13.1->10.1.13.2} }",
+    "paths": [
+      {
+        "nlri": {
+          "@type": "type.googleapis.com/apipb.LsAddrPrefix",
+          "type": "LS_NLRI_LINK",
+          "nlri": {
+            "@type": "type.googleapis.com/apipb.LsLinkNLRI",
+            "local_node": {
+              "asn": 65000,
+              "bgp_ls_id": 100,
+              "igp_router_id": "0010.0100.1001",
+              "bgp_router_id": "<nil>"
+            },
+            "remote_node": {
+              "asn": 65000,
+              "bgp_ls_id": 100,
+              "igp_router_id": "0030.0300.3003",
+              "bgp_router_id": "<nil>"
+            },
+            "link_descriptor": {
+              "interface_addr_ipv4": "10.1.13.1",
+              "neighbor_addr_ipv4": "10.1.13.2"
+            }
+          },
+          "length": 85,
+          "protocol_id": "LS_PROTOCOL_ISIS_L2"
+        },
+        "pattrs": [
+          {
+            "@type": "type.googleapis.com/apipb.OriginAttribute"
+          },
+          {
+            "@type": "type.googleapis.com/apipb.AsPathAttribute"
+          },
+          {
+            "@type": "type.googleapis.com/apipb.LocalPrefAttribute",
+            "local_pref": 100
+          },
+          {
+            "@type": "type.googleapis.com/apipb.LsAttribute",
+            "node": {},
+            "link": {
+              "igp_metric": 10,
+              "sr_adjacency_sid": 100013
+            },
+            "prefix": {},
+            "bgp_peer_segment": {}
+          },
+          {
+            "@type": "type.googleapis.com/apipb.MpReachNLRIAttribute",
+            "family": {
+              "afi": "AFI_LS",
+              "safi": "SAFI_LS"
+            },
+            "next_hops": [
+              "10.0.0.103"
+            ],
+            "nlris": [
+              {
+                "@type": "type.googleapis.com/apipb.LsAddrPrefix",
+                "type": "LS_NLRI_LINK",
+                "nlri": {
+                  "@type": "type.googleapis.com/apipb.LsLinkNLRI",
+                  "local_node": {
+                    "asn": 65000,
+                    "bgp_ls_id": 100,
+                    "igp_router_id": "0010.0100.1001",
+                    "bgp_router_id": "<nil>"
+                  },
+                  "remote_node": {
+                    "asn": 65000,
+                    "bgp_ls_id": 100,
+                    "igp_router_id": "0030.0300.3003",
+                    "bgp_router_id": "<nil>"
+                  },
+                  "link_descriptor": {
+                    "interface_addr_ipv4": "10.1.13.1",
+                    "neighbor_addr_ipv4": "10.1.13.2"
+                  }
+                },
+                "length": 85,
+                "protocol_id": "LS_PROTOCOL_ISIS_L2"
+              }
+            ]
+          }
+        ],
+        "age": "2025-12-06T11:29:58Z",
+        "best": true,
+        "validation": {},
+        "family": {
+          "afi": "AFI_LS",
+          "safi": "SAFI_LS"
+        },
+        "source_asn": 65000,
+        "source_id": "3.3.3.3",
+        "neighbor_ip": "10.0.0.103",
+        "local_identifier": 1
+      }
+    ]
+  },
+  {
+    "prefix": "NLRI { PREFIXv4 { LOCAL_NODE: 0020.0200.2002 PREFIX: [10.1.23.0/30] } }",
+    "paths": [
+      {
+        "nlri": {
+          "@type": "type.googleapis.com/apipb.LsAddrPrefix",
+          "type": "LS_NLRI_PREFIX_V4",
+          "nlri": {
+            "@type": "type.googleapis.com/apipb.LsPrefixV4NLRI",
+            "local_node": {
+              "asn": 65000,
+              "bgp_ls_id": 100,
+              "igp_router_id": "0020.0200.2002",
+              "bgp_router_id": "<nil>"
+            },
+            "prefix_descriptor": {
+              "ip_reachability": [
+                "10.1.23.0/30"
+              ]
+            }
+          },
+          "length": 48,
+          "protocol_id": "LS_PROTOCOL_ISIS_L2"
+        },
+        "pattrs": [
+          {
+            "@type": "type.googleapis.com/apipb.OriginAttribute"
+          },
+          {
+            "@type": "type.googleapis.com/apipb.AsPathAttribute"
+          },
+          {
+            "@type": "type.googleapis.com/apipb.LocalPrefAttribute",
+            "local_pref": 100
+          },
+          {
+            "@type": "type.googleapis.com/apipb.LsAttribute",
+            "node": {},
+            "link": {},
+            "prefix": {
+              "igp_flags": {}
+            },
+            "bgp_peer_segment": {}
+          },
+          {
+            "@type": "type.googleapis.com/apipb.MpReachNLRIAttribute",
+            "family": {
+              "afi": "AFI_LS",
+              "safi": "SAFI_LS"
+            },
+            "next_hops": [
+              "10.0.0.103"
+            ],
+            "nlris": [
+              {
+                "@type": "type.googleapis.com/apipb.LsAddrPrefix",
+                "type": "LS_NLRI_PREFIX_V4",
+                "nlri": {
+                  "@type": "type.googleapis.com/apipb.LsPrefixV4NLRI",
+                  "local_node": {
+                    "asn": 65000,
+                    "bgp_ls_id": 100,
+                    "igp_router_id": "0020.0200.2002",
+                    "bgp_router_id": "<nil>"
+                  },
+                  "prefix_descriptor": {
+                    "ip_reachability": [
+                      "10.1.23.0/30"
+                    ]
+                  }
+                },
+                "length": 48,
+                "protocol_id": "LS_PROTOCOL_ISIS_L2"
+              }
+            ]
+          }
+        ],
+        "age": "2025-12-06T11:11:40Z",
+        "best": true,
+        "validation": {},
+        "family": {
+          "afi": "AFI_LS",
+          "safi": "SAFI_LS"
+        },
+        "source_asn": 65000,
+        "source_id": "3.3.3.3",
+        "neighbor_ip": "10.0.0.103",
+        "local_identifier": 1
+      }
+    ]
+  },
+  {
+    "prefix": "NLRI { PREFIXv4 { LOCAL_NODE: 0020.0200.2002 PREFIX: [10.1.12.0/30] } }",
+    "paths": [
+      {
+        "nlri": {
+          "@type": "type.googleapis.com/apipb.LsAddrPrefix",
+          "type": "LS_NLRI_PREFIX_V4",
+          "nlri": {
+            "@type": "type.googleapis.com/apipb.LsPrefixV4NLRI",
+            "local_node": {
+              "asn": 65000,
+              "bgp_ls_id": 100,
+              "igp_router_id": "0020.0200.2002",
+              "bgp_router_id": "<nil>"
+            },
+            "prefix_descriptor": {
+              "ip_reachability": [
+                "10.1.12.0/30"
+              ]
+            }
+          },
+          "length": 65532,
+          "protocol_id": "LS_PROTOCOL_ISIS_L2"
+        },
+        "pattrs": [
+          {
+            "@type": "type.googleapis.com/apipb.OriginAttribute"
+          },
+          {
+            "@type": "type.googleapis.com/apipb.AsPathAttribute"
+          },
+          {
+            "@type": "type.googleapis.com/apipb.LocalPrefAttribute",
+            "local_pref": 100
+          },
+          {
+            "@type": "type.googleapis.com/apipb.LsAttribute",
+            "node": {},
+            "link": {},
+            "prefix": {
+              "igp_flags": {}
+            },
+            "bgp_peer_segment": {}
+          },
+          {
+            "@type": "type.googleapis.com/apipb.MpReachNLRIAttribute",
+            "family": {
+              "afi": "AFI_LS",
+              "safi": "SAFI_LS"
+            },
+            "next_hops": [
+              "10.0.0.103"
+            ],
+            "nlris": [
+              {
+                "@type": "type.googleapis.com/apipb.LsAddrPrefix",
+                "type": "LS_NLRI_PREFIX_V4",
+                "nlri": {
+                  "@type": "type.googleapis.com/apipb.LsPrefixV4NLRI",
+                  "local_node": {
+                    "asn": 65000,
+                    "bgp_ls_id": 100,
+                    "igp_router_id": "0020.0200.2002",
+                    "bgp_router_id": "<nil>"
+                  },
+                  "prefix_descriptor": {
+                    "ip_reachability": [
+                      "10.1.12.0/30"
+                    ]
+                  }
+                },
+                "length": 65532,
+                "protocol_id": "LS_PROTOCOL_ISIS_L2"
+              }
+            ]
+          }
+        ],
+        "age": "2025-12-06T11:11:40Z",
+        "best": true,
+        "validation": {},
+        "family": {
+          "afi": "AFI_LS",
+          "safi": "SAFI_LS"
+        },
+        "source_asn": 65000,
+        "source_id": "3.3.3.3",
+        "neighbor_ip": "10.0.0.103",
+        "local_identifier": 1
+      }
+    ]
+  },
+  {
+    "prefix": "NLRI { PREFIXv4 { LOCAL_NODE: 0030.0300.3003 PREFIX: [3.3.3.3/32] } }",
+    "paths": [
+      {
+        "nlri": {
+          "@type": "type.googleapis.com/apipb.LsAddrPrefix",
+          "type": "LS_NLRI_PREFIX_V4",
+          "nlri": {
+            "@type": "type.googleapis.com/apipb.LsPrefixV4NLRI",
+            "local_node": {
+              "asn": 65000,
+              "bgp_ls_id": 100,
+              "igp_router_id": "0030.0300.3003",
+              "bgp_router_id": "<nil>"
+            },
+            "prefix_descriptor": {
+              "ip_reachability": [
+                "3.3.3.3/32"
+              ]
+            }
+          },
+          "length": 48,
+          "protocol_id": "LS_PROTOCOL_ISIS_L2"
+        },
+        "pattrs": [
+          {
+            "@type": "type.googleapis.com/apipb.OriginAttribute"
+          },
+          {
+            "@type": "type.googleapis.com/apipb.AsPathAttribute"
+          },
+          {
+            "@type": "type.googleapis.com/apipb.LocalPrefAttribute",
+            "local_pref": 100
+          },
+          {
+            "@type": "type.googleapis.com/apipb.LsAttribute",
+            "node": {},
+            "link": {},
+            "prefix": {
+              "igp_flags": {},
+              "sr_prefix_sid": 3
+            },
+            "bgp_peer_segment": {}
+          },
+          {
+            "@type": "type.googleapis.com/apipb.MpReachNLRIAttribute",
+            "family": {
+              "afi": "AFI_LS",
+              "safi": "SAFI_LS"
+            },
+            "next_hops": [
+              "10.0.0.103"
+            ],
+            "nlris": [
+              {
+                "@type": "type.googleapis.com/apipb.LsAddrPrefix",
+                "type": "LS_NLRI_PREFIX_V4",
+                "nlri": {
+                  "@type": "type.googleapis.com/apipb.LsPrefixV4NLRI",
+                  "local_node": {
+                    "asn": 65000,
+                    "bgp_ls_id": 100,
+                    "igp_router_id": "0030.0300.3003",
+                    "bgp_router_id": "<nil>"
+                  },
+                  "prefix_descriptor": {
+                    "ip_reachability": [
+                      "3.3.3.3/32"
+                    ]
+                  }
+                },
+                "length": 48,
+                "protocol_id": "LS_PROTOCOL_ISIS_L2"
+              }
+            ]
+          }
+        ],
+        "age": "2025-12-06T11:05:38Z",
+        "best": true,
+        "validation": {},
+        "family": {
+          "afi": "AFI_LS",
+          "safi": "SAFI_LS"
+        },
+        "source_asn": 65000,
+        "source_id": "3.3.3.3",
+        "neighbor_ip": "10.0.0.103",
+        "local_identifier": 1
+      }
+    ]
+  },
+  {
+    "prefix": "NLRI { LINK { LOCAL_NODE: 0030.0300.3003 REMOTE_NODE: 0010.0100.1001 LINK: 10.1.13.2->10.1.13.1} }",
+    "paths": [
+      {
+        "nlri": {
+          "@type": "type.googleapis.com/apipb.LsAddrPrefix",
+          "type": "LS_NLRI_LINK",
+          "nlri": {
+            "@type": "type.googleapis.com/apipb.LsLinkNLRI",
+            "local_node": {
+              "asn": 65000,
+              "bgp_ls_id": 100,
+              "igp_router_id": "0030.0300.3003",
+              "bgp_router_id": "<nil>"
+            },
+            "remote_node": {
+              "asn": 65000,
+              "bgp_ls_id": 100,
+              "igp_router_id": "0010.0100.1001",
+              "bgp_router_id": "<nil>"
+            },
+            "link_descriptor": {
+              "interface_addr_ipv4": "10.1.13.2",
+              "neighbor_addr_ipv4": "10.1.13.1"
+            }
+          },
+          "length": 85,
+          "protocol_id": "LS_PROTOCOL_ISIS_L2"
+        },
+        "pattrs": [
+          {
+            "@type": "type.googleapis.com/apipb.OriginAttribute"
+          },
+          {
+            "@type": "type.googleapis.com/apipb.AsPathAttribute"
+          },
+          {
+            "@type": "type.googleapis.com/apipb.LocalPrefAttribute",
+            "local_pref": 100
+          },
+          {
+            "@type": "type.googleapis.com/apipb.LsAttribute",
+            "node": {},
+            "link": {
+              "igp_metric": 10,
+              "sr_adjacency_sid": 100031
+            },
+            "prefix": {},
+            "bgp_peer_segment": {}
+          },
+          {
+            "@type": "type.googleapis.com/apipb.MpReachNLRIAttribute",
+            "family": {
+              "afi": "AFI_LS",
+              "safi": "SAFI_LS"
+            },
+            "next_hops": [
+              "10.0.0.103"
+            ],
+            "nlris": [
+              {
+                "@type": "type.googleapis.com/apipb.LsAddrPrefix",
+                "type": "LS_NLRI_LINK",
+                "nlri": {
+                  "@type": "type.googleapis.com/apipb.LsLinkNLRI",
+                  "local_node": {
+                    "asn": 65000,
+                    "bgp_ls_id": 100,
+                    "igp_router_id": "0030.0300.3003",
+                    "bgp_router_id": "<nil>"
+                  },
+                  "remote_node": {
+                    "asn": 65000,
+                    "bgp_ls_id": 100,
+                    "igp_router_id": "0010.0100.1001",
+                    "bgp_router_id": "<nil>"
+                  },
+                  "link_descriptor": {
+                    "interface_addr_ipv4": "10.1.13.2",
+                    "neighbor_addr_ipv4": "10.1.13.1"
+                  }
+                },
+                "length": 85,
+                "protocol_id": "LS_PROTOCOL_ISIS_L2"
+              }
+            ]
+          }
+        ],
+        "age": "2025-12-06T11:29:58Z",
+        "best": true,
+        "validation": {},
+        "family": {
+          "afi": "AFI_LS",
+          "safi": "SAFI_LS"
+        },
+        "source_asn": 65000,
+        "source_id": "3.3.3.3",
+        "neighbor_ip": "10.0.0.103",
+        "local_identifier": 1
+      }
+    ]
+  },
+  {
+    "prefix": "NLRI { NODE { AS:65000 BGP-LS ID:100 0030.0300.3003 ISIS-L2:0 } }",
+    "paths": [
+      {
+        "nlri": {
+          "@type": "type.googleapis.com/apipb.LsAddrPrefix",
+          "type": "LS_NLRI_NODE",
+          "nlri": {
+            "@type": "type.googleapis.com/apipb.LsNodeNLRI",
+            "local_node": {
+              "asn": 65000,
+              "bgp_ls_id": 100,
+              "igp_router_id": "0030.0300.3003",
+              "bgp_router_id": "<nil>"
+            }
+          },
+          "length": 39,
+          "protocol_id": "LS_PROTOCOL_ISIS_L2"
+        },
+        "pattrs": [
+          {
+            "@type": "type.googleapis.com/apipb.OriginAttribute"
+          },
+          {
+            "@type": "type.googleapis.com/apipb.AsPathAttribute"
+          },
+          {
+            "@type": "type.googleapis.com/apipb.LocalPrefAttribute",
+            "local_pref": 100
+          },
+          {
+            "@type": "type.googleapis.com/apipb.LsAttribute",
+            "node": {
+              "name": "R3",
+              "flags": {
+                "abr": true
+              },
+              "local_router_id": "3.3.3.3",
+              "isis_area": "SQAB",
+              "sr_capabilities": {
+                "ranges": [
+                  {
+                    "begin": 20000,
+                    "end": 30001
+                  }
+                ]
+              },
+              "sr_algorithms": "AA=="
+            },
+            "link": {
+              "local_router_id": "3.3.3.3"
+            },
+            "prefix": {},
+            "bgp_peer_segment": {}
+          },
+          {
+            "@type": "type.googleapis.com/apipb.MpReachNLRIAttribute",
+            "family": {
+              "afi": "AFI_LS",
+              "safi": "SAFI_LS"
+            },
+            "next_hops": [
+              "10.0.0.103"
+            ],
+            "nlris": [
+              {
+                "@type": "type.googleapis.com/apipb.LsAddrPrefix",
+                "type": "LS_NLRI_NODE",
+                "nlri": {
+                  "@type": "type.googleapis.com/apipb.LsNodeNLRI",
+                  "local_node": {
+                    "asn": 65000,
+                    "bgp_ls_id": 100,
+                    "igp_router_id": "0030.0300.3003",
+                    "bgp_router_id": "<nil>"
+                  }
+                },
+                "length": 39,
+                "protocol_id": "LS_PROTOCOL_ISIS_L2"
+              }
+            ]
+          }
+        ],
+        "age": "2025-12-06T11:05:38Z",
+        "best": true,
+        "validation": {},
+        "family": {
+          "afi": "AFI_LS",
+          "safi": "SAFI_LS"
+        },
+        "source_asn": 65000,
+        "source_id": "3.3.3.3",
+        "neighbor_ip": "10.0.0.103",
+        "local_identifier": 1
+      }
+    ]
+  },
+  {
+    "prefix": "NLRI { LINK { LOCAL_NODE: 0010.0100.1001 REMOTE_NODE: 0020.0200.2002 LINK: 10.1.12.1->10.1.12.2} }",
+    "paths": [
+      {
+        "nlri": {
+          "@type": "type.googleapis.com/apipb.LsAddrPrefix",
+          "type": "LS_NLRI_LINK",
+          "nlri": {
+            "@type": "type.googleapis.com/apipb.LsLinkNLRI",
+            "local_node": {
+              "asn": 65000,
+              "bgp_ls_id": 100,
+              "igp_router_id": "0010.0100.1001",
+              "bgp_router_id": "<nil>"
+            },
+            "remote_node": {
+              "asn": 65000,
+              "bgp_ls_id": 100,
+              "igp_router_id": "0020.0200.2002",
+              "bgp_router_id": "<nil>"
+            },
+            "link_descriptor": {
+              "interface_addr_ipv4": "10.1.12.1",
+              "neighbor_addr_ipv4": "10.1.12.2"
+            }
+          },
+          "length": 85,
+          "protocol_id": "LS_PROTOCOL_ISIS_L2"
+        },
+        "pattrs": [
+          {
+            "@type": "type.googleapis.com/apipb.OriginAttribute"
+          },
+          {
+            "@type": "type.googleapis.com/apipb.AsPathAttribute"
+          },
+          {
+            "@type": "type.googleapis.com/apipb.LocalPrefAttribute",
+            "local_pref": 100
+          },
+          {
+            "@type": "type.googleapis.com/apipb.LsAttribute",
+            "node": {},
+            "link": {
+              "igp_metric": 10,
+              "sr_adjacency_sid": 100012
+            },
+            "prefix": {},
+            "bgp_peer_segment": {}
+          },
+          {
+            "@type": "type.googleapis.com/apipb.MpReachNLRIAttribute",
+            "family": {
+              "afi": "AFI_LS",
+              "safi": "SAFI_LS"
+            },
+            "next_hops": [
+              "10.0.0.103"
+            ],
+            "nlris": [
+              {
+                "@type": "type.googleapis.com/apipb.LsAddrPrefix",
+                "type": "LS_NLRI_LINK",
+                "nlri": {
+                  "@type": "type.googleapis.com/apipb.LsLinkNLRI",
+                  "local_node": {
+                    "asn": 65000,
+                    "bgp_ls_id": 100,
+                    "igp_router_id": "0010.0100.1001",
+                    "bgp_router_id": "<nil>"
+                  },
+                  "remote_node": {
+                    "asn": 65000,
+                    "bgp_ls_id": 100,
+                    "igp_router_id": "0020.0200.2002",
+                    "bgp_router_id": "<nil>"
+                  },
+                  "link_descriptor": {
+                    "interface_addr_ipv4": "10.1.12.1",
+                    "neighbor_addr_ipv4": "10.1.12.2"
+                  }
+                },
+                "length": 85,
+                "protocol_id": "LS_PROTOCOL_ISIS_L2"
+              }
+            ]
+          }
+        ],
+        "age": "2025-12-06T11:11:40Z",
+        "best": true,
+        "validation": {},
+        "family": {
+          "afi": "AFI_LS",
+          "safi": "SAFI_LS"
+        },
+        "source_asn": 65000,
+        "source_id": "3.3.3.3",
+        "neighbor_ip": "10.0.0.103",
+        "local_identifier": 1
+      }
+    ]
+  },
+  {
+    "prefix": "NLRI { PREFIXv4 { LOCAL_NODE: 0010.0100.1001 PREFIX: [1.1.1.1/32] } }",
+    "paths": [
+      {
+        "nlri": {
+          "@type": "type.googleapis.com/apipb.LsAddrPrefix",
+          "type": "LS_NLRI_PREFIX_V4",
+          "nlri": {
+            "@type": "type.googleapis.com/apipb.LsPrefixV4NLRI",
+            "local_node": {
+              "asn": 65000,
+              "bgp_ls_id": 100,
+              "igp_router_id": "0010.0100.1001",
+              "bgp_router_id": "<nil>"
+            },
+            "prefix_descriptor": {
+              "ip_reachability": [
+                "1.1.1.1/32"
+              ]
+            }
+          },
+          "length": 48,
+          "protocol_id": "LS_PROTOCOL_ISIS_L2"
+        },
+        "pattrs": [
+          {
+            "@type": "type.googleapis.com/apipb.OriginAttribute"
+          },
+          {
+            "@type": "type.googleapis.com/apipb.AsPathAttribute"
+          },
+          {
+            "@type": "type.googleapis.com/apipb.LocalPrefAttribute",
+            "local_pref": 100
+          },
+          {
+            "@type": "type.googleapis.com/apipb.LsAttribute",
+            "node": {},
+            "link": {},
+            "prefix": {
+              "igp_flags": {},
+              "sr_prefix_sid": 1
+            },
+            "bgp_peer_segment": {}
+          },
+          {
+            "@type": "type.googleapis.com/apipb.MpReachNLRIAttribute",
+            "family": {
+              "afi": "AFI_LS",
+              "safi": "SAFI_LS"
+            },
+            "next_hops": [
+              "10.0.0.103"
+            ],
+            "nlris": [
+              {
+                "@type": "type.googleapis.com/apipb.LsAddrPrefix",
+                "type": "LS_NLRI_PREFIX_V4",
+                "nlri": {
+                  "@type": "type.googleapis.com/apipb.LsPrefixV4NLRI",
+                  "local_node": {
+                    "asn": 65000,
+                    "bgp_ls_id": 100,
+                    "igp_router_id": "0010.0100.1001",
+                    "bgp_router_id": "<nil>"
+                  },
+                  "prefix_descriptor": {
+                    "ip_reachability": [
+                      "1.1.1.1/32"
+                    ]
+                  }
+                },
+                "length": 48,
+                "protocol_id": "LS_PROTOCOL_ISIS_L2"
+              }
+            ]
+          }
+        ],
+        "age": "2025-12-06T11:05:38Z",
+        "best": true,
+        "validation": {},
+        "family": {
+          "afi": "AFI_LS",
+          "safi": "SAFI_LS"
+        },
+        "source_asn": 65000,
+        "source_id": "3.3.3.3",
+        "neighbor_ip": "10.0.0.103",
+        "local_identifier": 1
+      }
+    ]
+  },
+  {
+    "prefix": "NLRI { LINK { LOCAL_NODE: 0030.0300.3003 REMOTE_NODE: 0020.0200.2002 LINK: 10.1.23.2->10.1.23.1} }",
+    "paths": [
+      {
+        "nlri": {
+          "@type": "type.googleapis.com/apipb.LsAddrPrefix",
+          "type": "LS_NLRI_LINK",
+          "nlri": {
+            "@type": "type.googleapis.com/apipb.LsLinkNLRI",
+            "local_node": {
+              "asn": 65000,
+              "bgp_ls_id": 100,
+              "igp_router_id": "0030.0300.3003",
+              "bgp_router_id": "<nil>"
+            },
+            "remote_node": {
+              "asn": 65000,
+              "bgp_ls_id": 100,
+              "igp_router_id": "0020.0200.2002",
+              "bgp_router_id": "<nil>"
+            },
+            "link_descriptor": {
+              "interface_addr_ipv4": "10.1.23.2",
+              "neighbor_addr_ipv4": "10.1.23.1"
+            }
+          },
+          "length": 85,
+          "protocol_id": "LS_PROTOCOL_ISIS_L2"
+        },
+        "pattrs": [
+          {
+            "@type": "type.googleapis.com/apipb.OriginAttribute"
+          },
+          {
+            "@type": "type.googleapis.com/apipb.AsPathAttribute"
+          },
+          {
+            "@type": "type.googleapis.com/apipb.LocalPrefAttribute",
+            "local_pref": 100
+          },
+          {
+            "@type": "type.googleapis.com/apipb.LsAttribute",
+            "node": {},
+            "link": {
+              "igp_metric": 10,
+              "sr_adjacency_sid": 100032
+            },
+            "prefix": {},
+            "bgp_peer_segment": {}
+          },
+          {
+            "@type": "type.googleapis.com/apipb.MpReachNLRIAttribute",
+            "family": {
+              "afi": "AFI_LS",
+              "safi": "SAFI_LS"
+            },
+            "next_hops": [
+              "10.0.0.103"
+            ],
+            "nlris": [
+              {
+                "@type": "type.googleapis.com/apipb.LsAddrPrefix",
+                "type": "LS_NLRI_LINK",
+                "nlri": {
+                  "@type": "type.googleapis.com/apipb.LsLinkNLRI",
+                  "local_node": {
+                    "asn": 65000,
+                    "bgp_ls_id": 100,
+                    "igp_router_id": "0030.0300.3003",
+                    "bgp_router_id": "<nil>"
+                  },
+                  "remote_node": {
+                    "asn": 65000,
+                    "bgp_ls_id": 100,
+                    "igp_router_id": "0020.0200.2002",
+                    "bgp_router_id": "<nil>"
+                  },
+                  "link_descriptor": {
+                    "interface_addr_ipv4": "10.1.23.2",
+                    "neighbor_addr_ipv4": "10.1.23.1"
+                  }
+                },
+                "length": 85,
+                "protocol_id": "LS_PROTOCOL_ISIS_L2"
+              }
+            ]
+          }
+        ],
+        "age": "2025-12-06T11:11:40Z",
+        "best": true,
+        "validation": {},
+        "family": {
+          "afi": "AFI_LS",
+          "safi": "SAFI_LS"
+        },
+        "source_asn": 65000,
+        "source_id": "3.3.3.3",
+        "neighbor_ip": "10.0.0.103",
+        "local_identifier": 1
+      }
+    ]
+  },
+  {
+    "prefix": "NLRI { LINK { LOCAL_NODE: 0020.0200.2002 REMOTE_NODE: 0010.0100.1001 LINK: 10.1.12.2->10.1.12.1} }",
+    "paths": [
+      {
+        "nlri": {
+          "@type": "type.googleapis.com/apipb.LsAddrPrefix",
+          "type": "LS_NLRI_LINK",
+          "nlri": {
+            "@type": "type.googleapis.com/apipb.LsLinkNLRI",
+            "local_node": {
+              "asn": 65000,
+              "bgp_ls_id": 100,
+              "igp_router_id": "0020.0200.2002",
+              "bgp_router_id": "<nil>"
+            },
+            "remote_node": {
+              "asn": 65000,
+              "bgp_ls_id": 100,
+              "igp_router_id": "0010.0100.1001",
+              "bgp_router_id": "<nil>"
+            },
+            "link_descriptor": {
+              "interface_addr_ipv4": "10.1.12.2",
+              "neighbor_addr_ipv4": "10.1.12.1"
+            }
+          },
+          "length": 85,
+          "protocol_id": "LS_PROTOCOL_ISIS_L2"
+        },
+        "pattrs": [
+          {
+            "@type": "type.googleapis.com/apipb.OriginAttribute"
+          },
+          {
+            "@type": "type.googleapis.com/apipb.AsPathAttribute"
+          },
+          {
+            "@type": "type.googleapis.com/apipb.LocalPrefAttribute",
+            "local_pref": 100
+          },
+          {
+            "@type": "type.googleapis.com/apipb.LsAttribute",
+            "node": {},
+            "link": {
+              "igp_metric": 10,
+              "sr_adjacency_sid": 100021
+            },
+            "prefix": {},
+            "bgp_peer_segment": {}
+          },
+          {
+            "@type": "type.googleapis.com/apipb.MpReachNLRIAttribute",
+            "family": {
+              "afi": "AFI_LS",
+              "safi": "SAFI_LS"
+            },
+            "next_hops": [
+              "10.0.0.103"
+            ],
+            "nlris": [
+              {
+                "@type": "type.googleapis.com/apipb.LsAddrPrefix",
+                "type": "LS_NLRI_LINK",
+                "nlri": {
+                  "@type": "type.googleapis.com/apipb.LsLinkNLRI",
+                  "local_node": {
+                    "asn": 65000,
+                    "bgp_ls_id": 100,
+                    "igp_router_id": "0020.0200.2002",
+                    "bgp_router_id": "<nil>"
+                  },
+                  "remote_node": {
+                    "asn": 65000,
+                    "bgp_ls_id": 100,
+                    "igp_router_id": "0010.0100.1001",
+                    "bgp_router_id": "<nil>"
+                  },
+                  "link_descriptor": {
+                    "interface_addr_ipv4": "10.1.12.2",
+                    "neighbor_addr_ipv4": "10.1.12.1"
+                  }
+                },
+                "length": 85,
+                "protocol_id": "LS_PROTOCOL_ISIS_L2"
+              }
+            ]
+          }
+        ],
+        "age": "2025-12-06T11:11:40Z",
+        "best": true,
+        "validation": {},
+        "family": {
+          "afi": "AFI_LS",
+          "safi": "SAFI_LS"
+        },
+        "source_asn": 65000,
+        "source_id": "3.3.3.3",
+        "neighbor_ip": "10.0.0.103",
+        "local_identifier": 1
+      }
+    ]
+  },
+  {
+    "prefix": "NLRI { PREFIXv4 { LOCAL_NODE: 0010.0100.1001 PREFIX: [10.1.12.0/30] } }",
+    "paths": [
+      {
+        "nlri": {
+          "@type": "type.googleapis.com/apipb.LsAddrPrefix",
+          "type": "LS_NLRI_PREFIX_V4",
+          "nlri": {
+            "@type": "type.googleapis.com/apipb.LsPrefixV4NLRI",
+            "local_node": {
+              "asn": 65000,
+              "bgp_ls_id": 100,
+              "igp_router_id": "0010.0100.1001",
+              "bgp_router_id": "<nil>"
+            },
+            "prefix_descriptor": {
+              "ip_reachability": [
+                "10.1.12.0/30"
+              ]
+            }
+          },
+          "length": 65480,
+          "protocol_id": "LS_PROTOCOL_ISIS_L2"
+        },
+        "pattrs": [
+          {
+            "@type": "type.googleapis.com/apipb.OriginAttribute"
+          },
+          {
+            "@type": "type.googleapis.com/apipb.AsPathAttribute"
+          },
+          {
+            "@type": "type.googleapis.com/apipb.LocalPrefAttribute",
+            "local_pref": 100
+          },
+          {
+            "@type": "type.googleapis.com/apipb.LsAttribute",
+            "node": {},
+            "link": {},
+            "prefix": {
+              "igp_flags": {}
+            },
+            "bgp_peer_segment": {}
+          },
+          {
+            "@type": "type.googleapis.com/apipb.MpReachNLRIAttribute",
+            "family": {
+              "afi": "AFI_LS",
+              "safi": "SAFI_LS"
+            },
+            "next_hops": [
+              "10.0.0.103"
+            ],
+            "nlris": [
+              {
+                "@type": "type.googleapis.com/apipb.LsAddrPrefix",
+                "type": "LS_NLRI_PREFIX_V4",
+                "nlri": {
+                  "@type": "type.googleapis.com/apipb.LsPrefixV4NLRI",
+                  "local_node": {
+                    "asn": 65000,
+                    "bgp_ls_id": 100,
+                    "igp_router_id": "0010.0100.1001",
+                    "bgp_router_id": "<nil>"
+                  },
+                  "prefix_descriptor": {
+                    "ip_reachability": [
+                      "10.1.12.0/30"
+                    ]
+                  }
+                },
+                "length": 65480,
+                "protocol_id": "LS_PROTOCOL_ISIS_L2"
+              }
+            ]
+          }
+        ],
+        "age": "2025-12-06T11:11:40Z",
+        "best": true,
+        "validation": {},
+        "family": {
+          "afi": "AFI_LS",
+          "safi": "SAFI_LS"
+        },
+        "source_asn": 65000,
+        "source_id": "3.3.3.3",
+        "neighbor_ip": "10.0.0.103",
+        "local_identifier": 1
+      }
+    ]
+  },
+  {
+    "prefix": "NLRI { NODE { AS:65000 BGP-LS ID:100 0010.0100.1001 ISIS-L2:0 } }",
+    "paths": [
+      {
+        "nlri": {
+          "@type": "type.googleapis.com/apipb.LsAddrPrefix",
+          "type": "LS_NLRI_NODE",
+          "nlri": {
+            "@type": "type.googleapis.com/apipb.LsNodeNLRI",
+            "local_node": {
+              "asn": 65000,
+              "bgp_ls_id": 100,
+              "igp_router_id": "0010.0100.1001",
+              "bgp_router_id": "<nil>"
+            }
+          },
+          "length": 39,
+          "protocol_id": "LS_PROTOCOL_ISIS_L2"
+        },
+        "pattrs": [
+          {
+            "@type": "type.googleapis.com/apipb.OriginAttribute"
+          },
+          {
+            "@type": "type.googleapis.com/apipb.AsPathAttribute"
+          },
+          {
+            "@type": "type.googleapis.com/apipb.LocalPrefAttribute",
+            "local_pref": 100
+          },
+          {
+            "@type": "type.googleapis.com/apipb.LsAttribute",
+            "node": {
+              "name": "R1",
+              "flags": {
+                "abr": true
+              },
+              "local_router_id": "1.1.1.1",
+              "isis_area": "SQAB",
+              "sr_capabilities": {
+                "ranges": [
+                  {
+                    "begin": 20000,
+                    "end": 30001
+                  }
+                ]
+              },
+              "sr_algorithms": "AA=="
+            },
+            "link": {
+              "local_router_id": "1.1.1.1"
+            },
+            "prefix": {},
+            "bgp_peer_segment": {}
+          },
+          {
+            "@type": "type.googleapis.com/apipb.MpReachNLRIAttribute",
+            "family": {
+              "afi": "AFI_LS",
+              "safi": "SAFI_LS"
+            },
+            "next_hops": [
+              "10.0.0.103"
+            ],
+            "nlris": [
+              {
+                "@type": "type.googleapis.com/apipb.LsAddrPrefix",
+                "type": "LS_NLRI_NODE",
+                "nlri": {
+                  "@type": "type.googleapis.com/apipb.LsNodeNLRI",
+                  "local_node": {
+                    "asn": 65000,
+                    "bgp_ls_id": 100,
+                    "igp_router_id": "0010.0100.1001",
+                    "bgp_router_id": "<nil>"
+                  }
+                },
+                "length": 39,
+                "protocol_id": "LS_PROTOCOL_ISIS_L2"
+              }
+            ]
+          }
+        ],
+        "age": "2025-12-06T11:05:38Z",
+        "best": true,
+        "validation": {},
+        "family": {
+          "afi": "AFI_LS",
+          "safi": "SAFI_LS"
+        },
+        "source_asn": 65000,
+        "source_id": "3.3.3.3",
+        "neighbor_ip": "10.0.0.103",
+        "local_identifier": 1
+      }
+    ]
+  },
+  {
+    "prefix": "NLRI { PREFIXv4 { LOCAL_NODE: 0030.0300.3003 PREFIX: [10.1.23.0/30] } }",
+    "paths": [
+      {
+        "nlri": {
+          "@type": "type.googleapis.com/apipb.LsAddrPrefix",
+          "type": "LS_NLRI_PREFIX_V4",
+          "nlri": {
+            "@type": "type.googleapis.com/apipb.LsPrefixV4NLRI",
+            "local_node": {
+              "asn": 65000,
+              "bgp_ls_id": 100,
+              "igp_router_id": "0030.0300.3003",
+              "bgp_router_id": "<nil>"
+            },
+            "prefix_descriptor": {
+              "ip_reachability": [
+                "10.1.23.0/30"
+              ]
+            }
+          },
+          "length": 65428,
+          "protocol_id": "LS_PROTOCOL_ISIS_L2"
+        },
+        "pattrs": [
+          {
+            "@type": "type.googleapis.com/apipb.OriginAttribute"
+          },
+          {
+            "@type": "type.googleapis.com/apipb.AsPathAttribute"
+          },
+          {
+            "@type": "type.googleapis.com/apipb.LocalPrefAttribute",
+            "local_pref": 100
+          },
+          {
+            "@type": "type.googleapis.com/apipb.LsAttribute",
+            "node": {},
+            "link": {},
+            "prefix": {
+              "igp_flags": {}
+            },
+            "bgp_peer_segment": {}
+          },
+          {
+            "@type": "type.googleapis.com/apipb.MpReachNLRIAttribute",
+            "family": {
+              "afi": "AFI_LS",
+              "safi": "SAFI_LS"
+            },
+            "next_hops": [
+              "10.0.0.103"
+            ],
+            "nlris": [
+              {
+                "@type": "type.googleapis.com/apipb.LsAddrPrefix",
+                "type": "LS_NLRI_PREFIX_V4",
+                "nlri": {
+                  "@type": "type.googleapis.com/apipb.LsPrefixV4NLRI",
+                  "local_node": {
+                    "asn": 65000,
+                    "bgp_ls_id": 100,
+                    "igp_router_id": "0030.0300.3003",
+                    "bgp_router_id": "<nil>"
+                  },
+                  "prefix_descriptor": {
+                    "ip_reachability": [
+                      "10.1.23.0/30"
+                    ]
+                  }
+                },
+                "length": 65428,
+                "protocol_id": "LS_PROTOCOL_ISIS_L2"
+              }
+            ]
+          }
+        ],
+        "age": "2025-12-06T11:11:40Z",
+        "best": true,
+        "validation": {},
+        "family": {
+          "afi": "AFI_LS",
+          "safi": "SAFI_LS"
+        },
+        "source_asn": 65000,
+        "source_id": "3.3.3.3",
+        "neighbor_ip": "10.0.0.103",
+        "local_identifier": 1
+      }
+    ]
+  },
+  {
+    "prefix": "NLRI { NODE { AS:65000 BGP-LS ID:100 0020.0200.2002 ISIS-L2:0 } }",
+    "paths": [
+      {
+        "nlri": {
+          "@type": "type.googleapis.com/apipb.LsAddrPrefix",
+          "type": "LS_NLRI_NODE",
+          "nlri": {
+            "@type": "type.googleapis.com/apipb.LsNodeNLRI",
+            "local_node": {
+              "asn": 65000,
+              "bgp_ls_id": 100,
+              "igp_router_id": "0020.0200.2002",
+              "bgp_router_id": "<nil>"
+            }
+          },
+          "length": 39,
+          "protocol_id": "LS_PROTOCOL_ISIS_L2"
+        },
+        "pattrs": [
+          {
+            "@type": "type.googleapis.com/apipb.OriginAttribute"
+          },
+          {
+            "@type": "type.googleapis.com/apipb.AsPathAttribute"
+          },
+          {
+            "@type": "type.googleapis.com/apipb.LocalPrefAttribute",
+            "local_pref": 100
+          },
+          {
+            "@type": "type.googleapis.com/apipb.LsAttribute",
+            "node": {
+              "name": "R2",
+              "flags": {
+                "abr": true
+              },
+              "local_router_id": "2.2.2.2",
+              "isis_area": "SQAB",
+              "sr_capabilities": {
+                "ranges": [
+                  {
+                    "begin": 20000,
+                    "end": 30001
+                  }
+                ]
+              },
+              "sr_algorithms": "AA=="
+            },
+            "link": {
+              "local_router_id": "2.2.2.2"
+            },
+            "prefix": {},
+            "bgp_peer_segment": {}
+          },
+          {
+            "@type": "type.googleapis.com/apipb.MpReachNLRIAttribute",
+            "family": {
+              "afi": "AFI_LS",
+              "safi": "SAFI_LS"
+            },
+            "next_hops": [
+              "10.0.0.103"
+            ],
+            "nlris": [
+              {
+                "@type": "type.googleapis.com/apipb.LsAddrPrefix",
+                "type": "LS_NLRI_NODE",
+                "nlri": {
+                  "@type": "type.googleapis.com/apipb.LsNodeNLRI",
+                  "local_node": {
+                    "asn": 65000,
+                    "bgp_ls_id": 100,
+                    "igp_router_id": "0020.0200.2002",
+                    "bgp_router_id": "<nil>"
+                  }
+                },
+                "length": 39,
+                "protocol_id": "LS_PROTOCOL_ISIS_L2"
+              }
+            ]
+          }
+        ],
+        "age": "2025-12-06T11:11:40Z",
+        "best": true,
+        "validation": {},
+        "family": {
+          "afi": "AFI_LS",
+          "safi": "SAFI_LS"
+        },
+        "source_asn": 65000,
+        "source_id": "3.3.3.3",
+        "neighbor_ip": "10.0.0.103",
+        "local_identifier": 1
+      }
+    ]
+  },
+  {
+    "prefix": "NLRI { PREFIXv4 { LOCAL_NODE: 0030.0300.3003 PREFIX: [10.1.13.0/30] } }",
+    "paths": [
+      {
+        "nlri": {
+          "@type": "type.googleapis.com/apipb.LsAddrPrefix",
+          "type": "LS_NLRI_PREFIX_V4",
+          "nlri": {
+            "@type": "type.googleapis.com/apipb.LsPrefixV4NLRI",
+            "local_node": {
+              "asn": 65000,
+              "bgp_ls_id": 100,
+              "igp_router_id": "0030.0300.3003",
+              "bgp_router_id": "<nil>"
+            },
+            "prefix_descriptor": {
+              "ip_reachability": [
+                "10.1.13.0/30"
+              ]
+            }
+          },
+          "length": 65532,
+          "protocol_id": "LS_PROTOCOL_ISIS_L2"
+        },
+        "pattrs": [
+          {
+            "@type": "type.googleapis.com/apipb.OriginAttribute"
+          },
+          {
+            "@type": "type.googleapis.com/apipb.AsPathAttribute"
+          },
+          {
+            "@type": "type.googleapis.com/apipb.LocalPrefAttribute",
+            "local_pref": 100
+          },
+          {
+            "@type": "type.googleapis.com/apipb.LsAttribute",
+            "node": {},
+            "link": {},
+            "prefix": {
+              "igp_flags": {}
+            },
+            "bgp_peer_segment": {}
+          },
+          {
+            "@type": "type.googleapis.com/apipb.MpReachNLRIAttribute",
+            "family": {
+              "afi": "AFI_LS",
+              "safi": "SAFI_LS"
+            },
+            "next_hops": [
+              "10.0.0.103"
+            ],
+            "nlris": [
+              {
+                "@type": "type.googleapis.com/apipb.LsAddrPrefix",
+                "type": "LS_NLRI_PREFIX_V4",
+                "nlri": {
+                  "@type": "type.googleapis.com/apipb.LsPrefixV4NLRI",
+                  "local_node": {
+                    "asn": 65000,
+                    "bgp_ls_id": 100,
+                    "igp_router_id": "0030.0300.3003",
+                    "bgp_router_id": "<nil>"
+                  },
+                  "prefix_descriptor": {
+                    "ip_reachability": [
+                      "10.1.13.0/30"
+                    ]
+                  }
+                },
+                "length": 65532,
+                "protocol_id": "LS_PROTOCOL_ISIS_L2"
+              }
+            ]
+          }
+        ],
+        "age": "2025-12-06T11:05:38Z",
+        "best": true,
+        "validation": {},
+        "family": {
+          "afi": "AFI_LS",
+          "safi": "SAFI_LS"
+        },
+        "source_asn": 65000,
+        "source_id": "3.3.3.3",
+        "neighbor_ip": "10.0.0.103",
+        "local_identifier": 1
+      }
+    ]
+  },
+  {
+    "prefix": "NLRI { LINK { LOCAL_NODE: 0020.0200.2002 REMOTE_NODE: 0030.0300.3003 LINK: 10.1.23.1->10.1.23.2} }",
+    "paths": [
+      {
+        "nlri": {
+          "@type": "type.googleapis.com/apipb.LsAddrPrefix",
+          "type": "LS_NLRI_LINK",
+          "nlri": {
+            "@type": "type.googleapis.com/apipb.LsLinkNLRI",
+            "local_node": {
+              "asn": 65000,
+              "bgp_ls_id": 100,
+              "igp_router_id": "0020.0200.2002",
+              "bgp_router_id": "<nil>"
+            },
+            "remote_node": {
+              "asn": 65000,
+              "bgp_ls_id": 100,
+              "igp_router_id": "0030.0300.3003",
+              "bgp_router_id": "<nil>"
+            },
+            "link_descriptor": {
+              "interface_addr_ipv4": "10.1.23.1",
+              "neighbor_addr_ipv4": "10.1.23.2"
+            }
+          },
+          "length": 85,
+          "protocol_id": "LS_PROTOCOL_ISIS_L2"
+        },
+        "pattrs": [
+          {
+            "@type": "type.googleapis.com/apipb.OriginAttribute"
+          },
+          {
+            "@type": "type.googleapis.com/apipb.AsPathAttribute"
+          },
+          {
+            "@type": "type.googleapis.com/apipb.LocalPrefAttribute",
+            "local_pref": 100
+          },
+          {
+            "@type": "type.googleapis.com/apipb.LsAttribute",
+            "node": {},
+            "link": {
+              "igp_metric": 10,
+              "sr_adjacency_sid": 100023
+            },
+            "prefix": {},
+            "bgp_peer_segment": {}
+          },
+          {
+            "@type": "type.googleapis.com/apipb.MpReachNLRIAttribute",
+            "family": {
+              "afi": "AFI_LS",
+              "safi": "SAFI_LS"
+            },
+            "next_hops": [
+              "10.0.0.103"
+            ],
+            "nlris": [
+              {
+                "@type": "type.googleapis.com/apipb.LsAddrPrefix",
+                "type": "LS_NLRI_LINK",
+                "nlri": {
+                  "@type": "type.googleapis.com/apipb.LsLinkNLRI",
+                  "local_node": {
+                    "asn": 65000,
+                    "bgp_ls_id": 100,
+                    "igp_router_id": "0020.0200.2002",
+                    "bgp_router_id": "<nil>"
+                  },
+                  "remote_node": {
+                    "asn": 65000,
+                    "bgp_ls_id": 100,
+                    "igp_router_id": "0030.0300.3003",
+                    "bgp_router_id": "<nil>"
+                  },
+                  "link_descriptor": {
+                    "interface_addr_ipv4": "10.1.23.1",
+                    "neighbor_addr_ipv4": "10.1.23.2"
+                  }
+                },
+                "length": 85,
+                "protocol_id": "LS_PROTOCOL_ISIS_L2"
+              }
+            ]
+          }
+        ],
+        "age": "2025-12-06T11:11:40Z",
+        "best": true,
+        "validation": {},
+        "family": {
+          "afi": "AFI_LS",
+          "safi": "SAFI_LS"
+        },
+        "source_asn": 65000,
+        "source_id": "3.3.3.3",
+        "neighbor_ip": "10.0.0.103",
+        "local_identifier": 1
+      }
+    ]
+  }
+]

@@ -1,0 +1,13 @@
+<config xmlns="http://tail-f.com/ns/config/1.0">
+  <deploy-customers xmlns="http://example.com/deploy-customers">
+    <service-TSP>
+      <customer-name>CLIENT2</customer-name>
+      <pe-attributes>
+        <id>R2</id>
+        <port-id>1/1/c5/1</port-id>
+        <ipv4-addr>100.20.0.1</ipv4-addr>
+        <cidr-mask>24</cidr-mask>
+      </pe-attributes>
+    </service-TSP>
+  </deploy-customers>
+</config>

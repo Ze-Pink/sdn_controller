@@ -1,0 +1,16 @@
+# Créer le fichier
+python-dotenv
+typing
+jsonpath_ng
+google-cloud-aiplatform
+neo4j
+graphdatascience
+mcp
+mcp-neo4j-cypher
+requests
+aiohttp
+grpcio
+protobuf
+rich
+typing-extensions
+netmiko
